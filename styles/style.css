@@ -1,0 +1,255 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/ptsans.woff2) format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/ptsansbold.woff2) format("woff2");
+  font-display: swap;
+}
+
+/* .visually-hidden {
+  display: none;
+} */
+
+/* тестовый просмотр границ блока */
+.look-block {
+  border: #000000 solid;
+  background-color: aquamarine;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: white;
+  width: 1200px;
+}
+
+
+
+
+.navigation-link {
+  font-size: 20px;
+  text-decoration-line: none;
+  color: black;
+  font-weight: 700;
+  line-height: 26px;
+
+}
+
+.main-screen {
+  background-color: white;
+}
+
+.welcome-bg {
+  background: url("/img/welcome-bg.jpg");
+  width: 1200px;
+  height: 485px;
+}
+
+.welcome {
+  background: url("/img/welcome-welcome.svg") no-repeat center center;
+  width: inherit;
+  height: inherit;
+}
+
+.welcome-divider {
+  background: url("/img/welcome-divider.svg") bottom no-repeat;
+  width: inherit;
+  height: inherit;
+}
+
+.reasons-block {
+  height: 282px;
+  text-align: center;
+  position: relative;
+}
+
+.middle-align {
+  position: absolute;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.reasons-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.reasons-description {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+  color: #333333;
+}
+
+.search {
+  background: url("/img/header-search.svg") no-repeat;
+}
+
+.box {
+  float: left;
+}
+
+.box-text {
+  height: 384px;
+  width: 400px;
+}
+
+.box-img {
+  height: 384px;
+  width: 800px;
+}
+
+.box-light-blue {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.box-blue {
+  background-color: #83B3D3;
+  color: white
+}
+
+.box-halflight-blue {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-table dt {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+.advantages-table dd {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  margin-inline-start: auto;
+
+}
+
+
+/* поиск гостиниц */
+
+.hostel-search {
+  height: 417px;
+  width: 1200px;
+  float: right;
+}
+
+
+
+.search-question {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.search-description {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.hostel-search a {
+  position: absolute;
+  background: #756257;
+  border-radius: 10px;
+  width: 575px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* рассылка */
+.mailing {
+  height: 411px;
+  width: 1200px;
+  float: left;
+  color: #FFFFFF;
+  background-color: #333333;
+  background-image: url("/img/mailing-background.jpg");
+}
+
+.mailing-h {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mailing-description {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.mailing-input {
+  width: 600px;
+  height: 60px;
+
+  background: #F2F2F2;
+  border-radius: 0px 10px 10px 0px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.mailing-button {
+  width: 200px;
+  height: 60px;
+
+  background: #83B3D3;
+  border-radius: 0px 10px 10px 0px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.footer {
+  height: 120px;
+  width: 1200px;
+  float: left;
+}
+
+.footer-tel {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+}
+
+.logo-academy {
+  width: 115px;
+  height: 34px;
+}

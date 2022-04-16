@@ -4,61 +4,87 @@
 <head>
   <meta charset="utf-8" />
   <title>Седона</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-  <header>
+  <!-- шапка -->
+  <header class="page-header">
     <h1 class="visually-hidden">Главная страница</h1>
     <nav class="navigation">
       <h2 class="visually-hidden">главная навигация сайта</h2>
       <ul class="navigation-list">
         <li class="navigation-item navigation-current">
-          <a href="index.html">Главная</a>
+          <a class="navigation-link" href="index.html">Главная</a>
         </li>
         <li class="navigation-item">
-          <a href="index.html">О Седоне</a>
+          <a class="navigation-link" href="index.html">О Седоне</a>
         </li>
         <li class="navigation-item">
-          <a href="catalog.html">Гостиницы</a>
+          <a class="navigation-link" href="catalog.html">Гостиницы</a>
         </li>
       </ul>
     </nav>
-    <img class="logo" src="#" alt="логотип сайта." />
+    <img class="logo" src="img/logo-sedona.svg" alt="логотип сайта." width="138" height="70" />
     <nav class="navigation-user">
       <ul class="navigation-user-list">
-        <li class="navigation-user-item">
-          <a class="visually-hidden" href="index.html">Поиск</a>
+        <li class="navigation-user-item search">
+          <a class="navigation-link" href="#">
+            <span class="visually-hidden">Поиск</span>
+            <img class="search" alt="">
+          </a>
         </li>
         <li class="navigation-user-item">
-          <a class="visually-hidden" href="index.html">Избранное</a>
+          <a class="navigation-link" href="#">
+            <span class="visually-hidden">Избранное</span>
+            <img class="favourites" alt="">
+          </a>
         </li>
         <li class="navigation-user-item">
-          <a href="index.html">Хочу сюда!</a>
+          <a class="navigation-link" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
   </header>
-  <main>
+
+
+  <main class="main-index">
+    <!-- главная картинка -->
     <section class="main-screen">
       <h2 class="visually-hidden">описание Седоны</h2>
-      <p><img src="#" alt="горы." /></p>
-      <p><img src="#" alt="Welcome." /></p>
-      <p><img src="#" alt="to the gorgeous." /></p>
-      <p><img src="#" alt="sedona becouse the grand canyon sucrs!" /></p>
-      <p><img class="main-screen-divider" src="#" alt="" /></p>
 
-      <strong class="reasons-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</strong>
-      <p class="reasons-description">
-        Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!
-      </p>
+      <div class="main-wrap">
+        <div class="welcome-bg">
+          <!-- фоновая картинка -->
+          <div class="welcome">
+            <!-- надпись на фоне -->
+            <div class="welcome-divider">
+              <!-- разделитель -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reasons-block">
+        <div class="middle-align">
+
+          <p class="reasons-title">Седона — небольшой городок в Аризоне, <br>заслуживающий большего!</p>
+          <p class="reasons-description">
+            Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!
+          </p>
+        </div>
+      </div>
     </section>
-    <section class="advantages">
+
+    <!-- Преимущества таблицей. Тут не получилось убрать отступ внизу в ячейках с фотографией.
+    Почему-то при вставке фото ячейка увеличивала высоту на 4 пикселя. Не нашел, где починить -->
+    <!-- <section class="advantages">
       <h2 class="visually-hidden">Преимущества Седоны</h2>
       <table class="advantages-table">
-        <caption>
+        <caption class="visually-hidden">
           Преимущества Седоны
         </caption>
-        <tr>
+        <tr class="advantages-tr">
           <td class="advantages-table-blue">
             <dl>
               <dt>Настоящий городок</dt>
@@ -68,11 +94,11 @@
               </dd>
             </dl>
           </td>
-          <td colspan="2">
-            <img src="#" alt="Жизнь в Седоне." />
+          <td class="img" colspan="2">
+            <img class="img-live-sedona" src="img/number-one-photo.jpg" alt="Жизнь в Седоне." />
           </td>
         </tr>
-        <tr>
+        <tr class="advantages-tr">
           <td class="advantages-table-light-blue">
             <dl>
               <dt>Жильё</dt>
@@ -97,9 +123,9 @@
             </dl>
           </td>
         </tr>
-        <tr>
+        <tr class="advantages-tr">
           <td colspan="2">
-            <img src="#" alt="Мост дъявола в Седоне." />
+            <img src="/img/number-two-photo.jpg" alt="Мост дъявола в Седоне." />
           </td>
           <td class="advantages-table-blue">
             <dl>
@@ -111,7 +137,7 @@
             </dl>
           </td>
         </tr>
-        <tr>
+        <tr class="advantages-tr">
           <td class="advantages-table-light-blue">
             <dl>
               <dt>Небольшая площадь</dt>
@@ -135,21 +161,119 @@
           </td>
         </tr>
       </table>
+    </section> -->
+
+    <!-- Преимущества дивами -->
+    <section class="advantages">
+      <h2 class="visually-hidden">Преимущества Седоны</h2>
+      <div class="advantages-table">
+        <div class="number box box-blue box-text">
+          <dl>
+            <dt>Настоящий городок</dt>
+            <dd>— №1 —</dd>
+            <dd>
+              Седона — не аттракцион<br> для туристов, там течёт <br>своя жизнь
+            </dd>
+          </dl>
+        </div>
+        <div class="box box-img">
+          <img src=" /img/number-one-photo.jpg" alt="Жизнь в Седоне">
+        </div>
+        <div class="number box box-light-blue box-text">
+          <dl>
+            <dt>Жилье</dt>
+            <dd>
+              Рекомендуем пожить <br>
+              в настоящем мотеле,<br>
+              всё как в кино!
+            </dd>
+          </dl>
+        </div>
+        <div class="number box box-text">
+          <dl>
+            <dt>Еда</dt>
+            <dd>
+              Всегда заказывайте<br>
+              топовый фирменный бургер, <br>вы не разочаруетесь!
+            </dd>
+          </dl>
+        </div>
+        <div class="number box box-light-blue box-text">
+          <dl>
+            <dt>Сувениры</dt>
+            <dd>
+              Не только китайского,<br>
+              но и настоящего местного <br>производства!
+            </dd>
+          </dl>
+        </div>
+        <div class="box box-img">
+          <img src="/img/number-two-photo.jpg" alt="Мост дъявола">
+        </div>
+        <div class="number box box-blue box-text">
+          <dl>
+            <dt>Там есть мост дьявола</dt>
+            <dd>— №2 —</dd>
+            <dd>
+              Да, по нему можно пройти!<br> Если вы осмелитесь, <br>разумеется
+            </dd>
+          </dl>
+        </div>
+        <div class="number box box-light-blue box-text">
+          <dl>
+            <dt>Небольшая<br>
+              площадь</dt>
+            <dd>— №3 —</dd>
+            <dd>
+              Все достопримечательности<br>
+              находятся очень близко
+            </dd>
+          </dl>
+        </div>
+        <div class="number box box-halflight-blue box-text">
+          <dl>
+            <dt>Красивая<br>
+              дорога</dt>
+            <dd>— №4 —</dd>
+            <dd>
+              Ехать в Седону из Лас-Вегаса<br> совсем не скучно!
+            </dd>
+          </dl>
+        </div>
+        <div class="number box box-light-blue box-text">
+          <dl>
+            <dt>Мало<br>
+              туристов</dt>
+            <dd>— №5 —</dd>
+            <dd>
+              Большинство едет в Гранд <br>Каньон и толпится там
+            </dd>
+          </dl>
+        </div>
+      </div>
     </section>
-    <section class="hostel-search">
+
+
+    <!-- поиск гостиниц -->
+
+    <section class="hostel-search ">
       <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-      <b>Заинтересовались?</b>
-      <p>
-        Укажите предполагаемые даты поездки,<br />
-        и мы покажем вам лучшие предложения гостиниц в Седоне
-      </p>
+      <div>
+        <p class="search-question">Заинтересовались?</p>
+        <p class="search-description">
+          Укажите предполагаемые даты поездки,<br />
+          и мы покажем вам лучшие предложения гостиниц в Седоне
+        </p>
+      </div>
       <a class="hostel-search-button" href="catalog.html">Поиск гостиницы в Cедоне</a>
     </section>
-    <section class="mailing">
+
+    <!-- Рассылка -->
+    <section class="mailing ">
       <h2 class="visually-hidden">Рассылка</h2>
-      <b>Подпишитесь на рассылку</b>
-      <p>
-        Только полезная информация и никакого спама, честное бойскаутское!
+      <p class="mailing-h">Подпишитесь на рассылку</p>
+      <p class="mailing-description">
+        Только полезная информация и никакого спама,<br> честное бойскаутское!
       </p>
       <form action="https://echo.htmlacademy.ru/" method="post">
         <label>
@@ -160,11 +284,14 @@
       </form>
     </section>
   </main>
-  <footer class="footer">
+
+  <!-- подвал -->
+  <footer class="footer ">
     <ul class="footer-social-list">
       <li class="footer-social-item">
         <a class="button" href="#">
           <span class="visually-hidden">Твиттер</span>
+          <img src="" alt="">
         </a>
       </li>
       <li class="footer-social-item">
@@ -180,7 +307,7 @@
     </ul>
     <a class="footer-tel" href="tel:88128121212">+7 (812) 812-12-12</a>
     <a href="https://htmlacademy.ru" target="_blank">
-      <img src="#" alt="логотип html academy." />
+      <img class="logo-academy" src="/img/logo_htmlacademy.svg" alt="логотип html-academy." />
     </a>
   </footer>
 </body>
