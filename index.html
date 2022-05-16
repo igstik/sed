@@ -10,7 +10,7 @@
 <body>
   <!-- шапка -->
   <header class="page-header">
-    <h1 class="visually-hidden">Главная страница</h1>
+    <h1 class="visually-hidden ">Главная страница</h1>
     <nav class="navigation">
       <h2 class="visually-hidden">главная навигация сайта</h2>
       <ul class="navigation-list">
@@ -18,9 +18,9 @@
           <a class="navigation-link" href="index.html">Главная</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="index.html">О Седоне</a>
+          <a class="navigation-link" href="">О Седоне</a>
         </li>
-        <li class="navigation-item">
+        <li class="navigation-item ">
           <a class="navigation-link" href="catalog.html">Гостиницы</a>
         </li>
       </ul>
@@ -28,20 +28,19 @@
     <img class="logo" src="img/logo-sedona.svg" alt="логотип сайта." width="138" height="70" />
     <nav class="navigation-user">
       <ul class="navigation-user-list">
-        <li class="navigation-user-item search">
-          <a class="navigation-link" href="#">
+        <li class="navigation-user-item">
+          <a class="navigation-link link-search" href="#">
             <span class="visually-hidden">Поиск</span>
-            <img class="search" alt="">
           </a>
         </li>
         <li class="navigation-user-item">
-          <a class="navigation-link" href="#">
+          <a class="navigation-link link-favourites" href="#">
             <span class="visually-hidden">Избранное</span>
-            <img class="favourites" alt="">
+
           </a>
         </li>
         <li class="navigation-user-item">
-          <a class="navigation-link" href="#">Хочу сюда!</a>
+          <a class="navigation-link iwant" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -95,7 +94,7 @@
             </dl>
           </td>
           <td class="img" colspan="2">
-            <img class="img-live-sedona" src="img/number-one-photo.jpg" alt="Жизнь в Седоне." />
+            <img class="img-live-sedona" src="img/number-one-photo.jpg" alt="Жизнь в Седоне." width="800" height="384"/>
           </td>
         </tr>
         <tr class="advantages-tr">
@@ -125,7 +124,7 @@
         </tr>
         <tr class="advantages-tr">
           <td colspan="2">
-            <img src="/img/number-two-photo.jpg" alt="Мост дъявола в Седоне." />
+            <img src="/img/number-two-photo.jpg" alt="Мост дъявола в Седоне." width="800" height="384"/>
           </td>
           <td class="advantages-table-blue">
             <dl>
@@ -177,7 +176,7 @@
           </dl>
         </div>
         <div class="box box-img">
-          <img src=" /img/number-one-photo.jpg" alt="Жизнь в Седоне">
+          <img src=" /img/number-one-photo.jpg" alt="Жизнь в Седоне." width="800" height="384">
         </div>
         <div class="number box box-light-blue box-text">
           <dl>
@@ -208,7 +207,7 @@
           </dl>
         </div>
         <div class="box box-img">
-          <img src="/img/number-two-photo.jpg" alt="Мост дъявола">
+          <img src="/img/number-two-photo.jpg" alt="Мост дъявола." width="800" height="384">
         </div>
         <div class="number box box-blue box-text">
           <dl>
@@ -271,43 +270,44 @@
     <!-- Рассылка -->
     <section class="mailing ">
       <h2 class="visually-hidden">Рассылка</h2>
-      <p class="mailing-h">Подпишитесь на рассылку</p>
+      <p class="mailing-title">Подпишитесь на рассылку</p>
       <p class="mailing-description">
         Только полезная информация и никакого спама,<br> честное бойскаутское!
       </p>
-      <form action="https://echo.htmlacademy.ru/" method="post">
-        <label>
-          <span class="visually-hidden">e-mail</span>
-          <input class="mailing-input" type="email" name="mailing-email" placeholder="Ваш e-mail" required />
-        </label>
-        <input class="mailing-button" type="submit" value="Подписаться" />
-      </form>
+      <div class="mailing-form ">
+        <form action="https://echo.htmlacademy.ru/" method="post">
+          <label>
+            <span class="visually-hidden">e-mail</span>
+            <input class="mailing-input" type="email" name="mailing-email" placeholder="   Ваш e-mail" required />
+          </label>
+          <input class="mailing-button" type="submit" value="Подписаться" />
+        </form>
+      </div>
     </section>
   </main>
 
   <!-- подвал -->
-  <footer class="footer ">
+  <footer class="footer">
     <ul class="footer-social-list">
       <li class="footer-social-item">
-        <a class="button" href="#">
+        <a class="twitter" href="#">
           <span class="visually-hidden">Твиттер</span>
-          <img src="" alt="">
         </a>
       </li>
       <li class="footer-social-item">
-        <a class="button" href="#">
+        <a class="facebook" href="#">
           <span class="visually-hidden">Фейсбук</span>
         </a>
       </li>
       <li class="footer-social-item">
-        <a class="button" href="#">
+        <a class="youtube" href="#">
           <span class="visually-hidden">Ютуб</span>
         </a>
       </li>
     </ul>
     <a class="footer-tel" href="tel:88128121212">+7 (812) 812-12-12</a>
     <a href="https://htmlacademy.ru" target="_blank">
-      <img class="logo-academy" src="/img/logo_htmlacademy.svg" alt="логотип html-academy." />
+      <img src="/img/logo_htmlacademy.svg" alt="логотип html academy." width="115" height="34"/>
     </a>
   </footer>
 </body>

@@ -14,9 +14,18 @@
   font-display: swap;
 }
 
-/* .visually-hidden {
-  display: none;
-} */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /* тестовый просмотр границ блока */
 .look-block {
@@ -32,8 +41,9 @@ body {
   width: 1200px;
 }
 
-
-
+.navigation-item {
+  padding-bottom: 21px;
+}
 
 .navigation-link {
   font-size: 20px;
@@ -41,7 +51,25 @@ body {
   color: black;
   font-weight: 700;
   line-height: 26px;
+}
 
+.navigation-current {
+  border-bottom: 2px solid #756257;
+  width: fit-content;
+}
+
+.iwant {
+  display: block;
+  width: 160px;
+  height: 37px;
+  line-height: 37px;
+  background: #756257;
+  border-radius: 4px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 .main-screen {
@@ -92,9 +120,20 @@ body {
   line-height: 36px;
   color: #333333;
 }
-
-.search {
+/*
+.link-search {
   background: url("/img/header-search.svg") no-repeat;
+  display: block;
+  width: 18px;
+  height: 18px;
+} */
+
+.link-search::before {
+  content: url("/img/header-search.svg");
+}
+
+.link-favourites::before {
+  content: url("/img/header-favourites.svg");
 }
 
 .box {
@@ -104,11 +143,6 @@ body {
 .box-text {
   height: 384px;
   width: 400px;
-}
-
-.box-img {
-  height: 384px;
-  width: 800px;
 }
 
 .box-light-blue {
@@ -130,7 +164,6 @@ body {
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
-
 }
 
 .advantages-table dd {
@@ -139,7 +172,6 @@ body {
   line-height: 21px;
   text-align: center;
   margin-inline-start: auto;
-
 }
 
 
@@ -151,31 +183,33 @@ body {
   float: right;
 }
 
-
-
 .search-question {
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 91px;
 }
 
 .search-description {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+  margin-bottom: 58px;
 }
 
-.hostel-search a {
-  position: absolute;
+.hostel-search-button {
+  /* position: absolute; */
+  display: block;
+  margin: auto;
   background: #756257;
   border-radius: 10px;
   width: 575px;
   height: 60px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 36px;
+  line-height: 60px;
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -183,7 +217,8 @@ body {
 }
 
 /* рассылка */
-.mailing {
+.mailing,
+.mailing-inner {
   height: 411px;
   width: 1200px;
   float: left;
@@ -192,12 +227,20 @@ body {
   background-image: url("/img/mailing-background.jpg");
 }
 
-.mailing-h {
+.mailing-inner {
+  background-image: none;
+  background-color: white;
+  color: black;
+  /* border: 1px black solid; */
+}
+
+.mailing-title {
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 94px;
 }
 
 .mailing-description {
@@ -206,34 +249,47 @@ body {
   text-align: center;
 }
 
+.mailing-form {
+  width: 800px;
+  display: block;
+  margin: auto;
+}
+
+
+form input {
+  display: block;
+  margin: auto;
+}
+
 .mailing-input {
   width: 600px;
   height: 60px;
-
   background: #F2F2F2;
-  border-radius: 0px 10px 10px 0px;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  border-radius: 10px 0px 0px 10px;
+  float: left;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  border-width: 0px;
+  padding: 0px;
+  text-indent: 22px;
 }
 
 .mailing-button {
   width: 200px;
   height: 60px;
-
   background: #83B3D3;
-  border-radius: 0px 10px 10px 0px;
-
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-
-  display: flex;
-  align-items: center;
-  text-align: center;
   text-transform: uppercase;
-
   color: #FFFFFF;
+  border-width: 0px;
+  border-radius: 0px 10px 10px 0px;
+  padding: 0px;
 }
 
+/* футер */
 .footer {
   height: 120px;
   width: 1200px;
@@ -252,4 +308,279 @@ body {
 .logo-academy {
   width: 115px;
   height: 34px;
+}
+
+/* фильтр гостиниц */
+.filter-section {
+  background-color: #756257;
+  color: #F2F2F2;
+  background-image: url("/img/catalog-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 1200px 408px;
+}
+
+.inner-header-title {
+  font-size: 60px;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.control-label {
+  font-size: 18px;
+}
+
+.catalog-filter-label {
+  font-size: 18px;
+  line-height: 23px;
+  text-align: right;
+}
+
+.catalog-filter-input {
+  width: 40px;
+  height: 23px;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  border: 1;
+  line-height: 23px;
+}
+
+.catalog-filter-input-text {
+  line-height: 23px;
+  text-align: right;
+  opacity: 0.3;
+
+}
+
+.catalog-filter-label-border {
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  width: 287px;
+  height: 48px;
+  left: 640px;
+  top: 299px;
+}
+
+.catalog-search-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  text-transform: uppercase;
+}
+
+.catalog-filter-button {
+  background-color: #83B3D3;
+  width: 160px;
+  height: 48px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: 0;
+}
+
+.catalog-filter-button-reset {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 0;
+}
+
+.sorting-select {
+  line-height: 23px;
+  color: #333333;
+  font-size: 18px;
+  width: 287px;
+  height: 48px;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+}
+
+.button {
+  border: 2px solid #E6E6E6;
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  display: block;
+}
+
+.mode-current {
+  border-color: #000000;
+}
+
+.mode-tile {
+  background: url(/img/sort-mode-tile.svg) no-repeat center center;
+
+}
+
+.mode-slideshow {
+  background: url(/img/sort-mode-slideshow.svg) no-repeat center center;
+}
+
+.mode-list {
+  background: url(/img/sort-mode-list.svg) no-repeat center center;
+}
+
+/* список отелей */
+.hotel-card-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.hotel-card-hometype,
+.hotel-card-price {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+}
+
+.hotel-card-button {
+  width: 151px;
+  height: 37px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 37px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+  display: block;
+}
+
+.card-more {
+  background: #756257;
+}
+
+.card-favourites {
+  background: #83B3D3;
+}
+
+.hotel-card-stars {
+  background-image: url(/img/filtr-star.svg);
+  width: 18px;
+  height: 17px;
+  display: block;
+}
+
+.hotel-card-rating {
+  width: 160px;
+  height: 37px;
+  line-height: 37px;
+  background: #F2F2F2;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #333333;
+  display: block;
+}
+
+.button-card-more {
+  width: 625px;
+  height: 55px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: 0;
+  background: #83B3D3;
+  border-radius: 4px;
+  margin: auto;
+  display: block;
+}
+
+hr {
+  width: 1056px;
+  height: 0px;
+  left: 1168px;
+  top: 1447px;
+  border: 1px solid #E6E6E6;
+  transform: rotate(180deg);
+}
+
+.pagination,
+.navigation-user-list,
+.navigation-list {
+  list-style-type: none;
+}
+
+.pagination-link {
+  width: 55px;
+  height: 55px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 55px;
+  align-items: center;
+  text-align: center;
+  display: block;
+  background: #83B3D3;
+  border-radius: 4px;
+  color: white;
+}
+
+.pagination-current {
+  background: #F2F2F2;
+  color: black;
+}
+
+.hotels-summ {
+  line-height: 23px;
+}
+
+.hotels-summ-select {
+  width: 160px;
+  height: 48px;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 23px;
+  padding: 10px;
+}
+
+.footer-social-list {
+  list-style-type: none;
+}
+
+.footer-social-item .button {
+  border: none;
+  width: 18px;
+  height: 18px;
+  margin-right: 29px;
+}
+
+.facebook::before {
+  content: url(/img/social-facebook.svg) ;
+}
+
+.twitter::before {
+  content: url(/img/social-twitter.svg);
+}
+
+.youtube::before {
+  content: url(/img/social-youtube.svg) ;
+}
+
+.footer-tel {
+  text-align: center;
+  display: block;
+  width: 720px;
 }
