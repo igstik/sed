@@ -46,7 +46,7 @@
     </nav>
   </header>
   <main class="main-inner">
-    <div class="filter-section">
+    <section class="filter-section">
       <div class="filter-section-container ">
         <header class="inner-header ">
 
@@ -56,8 +56,7 @@
             <li class="breadcrumbs-item breadcrumbs-home">
               <a class="breadcrumbs-link visually-hidden" href="index.html">Главная</a>
             </li>
-            <li class="breadcrumbs-item breadcrumbs-nav">
-            </li>
+            <!-- <li class="breadcrumbs-item breadcrumbs-nav"></li> -->
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link">Гостиницы</a>
             </li>
@@ -131,10 +130,12 @@
                   <span class="catalog-filter-input-text">до</span>
                 </label>
               </div>
-              <button class="range-toggle toggle-min" type="button"></button>
-              <span class="visually-hidden">Изменить минимальную цену.</span>
-              <button class="range-toggle toggle-max" type="button"></button>
-              <span class="visually-hidden">Изменить максимальную цену.</span>
+              <div class="toggle-container">
+                <button class="range-toggle toggle-min" type="button"></button>
+                <span class="visually-hidden">Изменить минимальную цену.</span>
+                <button class="range-toggle toggle-max" type="button"></button>
+                <span class="visually-hidden">Изменить максимальную цену.</span>
+              </div>
             </fieldset>
             <div class="catalog-button-container">
               <button class="catalog-filter-button" type="submit">Применить</button>
@@ -143,7 +144,7 @@
           </form>
         </section>
       </div>
-    </div>
+    </section>
 
     <!-- результаты поиска в каталоге -->
     <section class="catalog-search ">
@@ -184,9 +185,13 @@
             --><a class="hotel-card-button card-favourites" href="#">в избранное</a>
           </div>
           <div class="hotel-rating-container">
-            <p class="hotel-card-stars">
-              <span class="visually-hidden">звезды</span>
-            </p>
+            <div class="hotel-card-stars-container">
+              <span class="visually-hidden">звезды рейтинга</span>
+              <p class="star"></p>
+              <p class="star"></p>
+              <p class="star"></p>
+              <p class="star"></p>
+            </div>
             <p class="hotel-card-rating">Рейтинг: 8,5</p>
           </div>
         </li>
@@ -204,9 +209,12 @@
            --><a class="hotel-card-button card-favourites" href="#">в избранное</a>
           </div>
           <div class="hotel-rating-container">
-            <p class="hotel-card-stars">
-              <span class="visually-hidden">звезды</span>
-            </p>
+            <div class="hotel-card-stars-container">
+              <span class="visually-hidden">звезды рейтинга</span>
+              <p class="star"></p>
+              <p class="star"></p>
+              <p class="star"></p>
+            </div>
             <p class="hotel-card-rating">Рейтинг: 8,9</p>
           </div>
         </li>
@@ -224,9 +232,11 @@
            --><a class="hotel-card-button card-favourites favour-true" href="#">в избранном</a>
           </div>
           <div class="hotel-rating-container">
-            <p class="hotel-card-stars">
-              <span class="visually-hidden">звезды</span>
-            </p>
+            <div class="hotel-card-stars-container">
+              <span class="visually-hidden">звезды рейтинга</span>
+              <p class="star"></p>
+              <p class="star"></p>
+            </div>
             <p class="hotel-card-rating">Рейтинг: 9,2</p>
           </div>
         </li>
@@ -244,9 +254,11 @@
            --><a class="hotel-card-button card-favourites" href="#">в избранное</a>
           </div>
           <div class="hotel-rating-container">
-            <p class="hotel-card-stars">
-              <span class="visually-hidden">звезды</span>
-            </p>
+            <div class="hotel-card-stars-container">
+              <span class="visually-hidden">звезды рейтинга</span>
+              <p class="star"></p>
+              <p class="star"></p>
+            </div>
             <p class="hotel-card-rating">Рейтинг: 9,2</p>
           </div>
         </li>
@@ -259,22 +271,22 @@
       <div class="pagination-container">
         <ul class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-current">1</a>
+            <a class="pagination-link pagination-current" href="#">1</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link ">2</a>
+            <a class="pagination-link" href="#">2</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link ">3</a>
+            <a class="pagination-link" href="#">3</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link ">4</a>
+            <a class="pagination-link" href="#">4</a>
           </li>
           <li class="pagination-item">
             <button class="pagination-link pagination-card-more" type="button">...</button>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link ">10</a>
+            <a class="pagination-link" href="#">10</a>
           </li>
         </ul>
         <span class="hotels-summ">Гостиниц на странице:</span>
@@ -308,17 +320,17 @@
   <footer class="footer">
     <ul class="footer-social-list">
       <li class="footer-social-item">
-        <a class=" twitter" href="#">
+        <a class="social-icon twitter" href="">
           <span class="visually-hidden">Твиттер</span>
         </a>
       </li>
       <li class="footer-social-item">
-        <a class=" facebook" href="#">
+        <a class="social-icon facebook" href="">
           <span class="visually-hidden">Фейсбук</span>
         </a>
       </li>
       <li class="footer-social-item">
-        <a class=" youtube" href="#">
+        <a class="social-icon youtube" href="#">
           <span class="visually-hidden">Ютуб</span>
         </a>
       </li>
