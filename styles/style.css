@@ -450,16 +450,9 @@ form input {
   padding: 15px;
 }
 
-.facebook {
-  content: url(/img/social-facebook.svg);
-}
 
-.twitter {
-  content: url(/img/social-twitter.svg);
-}
-
-.youtube {
-  content: url(/img/social-youtube.svg);
+.facebook-icon, .twitter-icon, .youtube-icon{
+  fill: #83B3D3;
 }
 
 .footer-tel {
