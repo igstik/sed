@@ -316,15 +316,24 @@ body {
 }
 
 .icon-home::before {
-  content: url("/img/icon-home.svg");
+  content: "";
+  background-image: url("/img/icon-home.svg");
+  width: 75px;
+  height: 72px;
 }
 
 .icon-eat::before {
-  content: url("/img/icon-eat.svg");
+  content: "";
+  background-image: url("/img/icon-eat.svg");
+  width: 74px;
+  height: 70px;
 }
 
 .icon-souvenir::before {
-  content: url("/img/icon-souvenir.svg");
+  content: "";
+  background-image: url("/img/icon-souvenir.svg");
+  width: 64px;
+  height: 76px;
 }
 
 
@@ -376,7 +385,6 @@ body {
 .mailing-inner {
   display: flex;
   flex-direction: column;
-  /* height: 411px; */
   color: #FFFFFF;
   background-color: #333333;
   background-image: url("/img/mailing-background.jpg");
@@ -577,7 +585,7 @@ form input {
 .breadcrumbs-home::after {
   position: absolute;
   content: "";
-  background: url("/img/breadcrumbs-nav-link.svg");
+  background-image: url("/img/breadcrumbs-nav-link.svg");
   width: 5px;
   height: 8px;
   top: 0px;
@@ -591,7 +599,6 @@ form input {
   border-radius: 4px;
   text-decoration: none;
   color: white;
-  /* outline: 3px solid #83B3D3; */
 }
 
 /* фильтр для поиска гостиниц */
